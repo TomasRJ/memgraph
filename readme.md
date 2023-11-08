@@ -4,11 +4,19 @@
 
 - [Memgraph](#memgraph)
   - [Indholdsfortegnelse](#indholdsfortegnelse)
+  - [Ressourcer](#ressourcer)
   - [Beskrivelse af databasen](#beskrivelse-af-databasen)
   - [Fordele og Ulemper](#fordele-og-ulemper)
   - [Demo](#demo)
   - [Dokumentation](#dokumentation)
-    - [Opæstningen / installation](#opæstningen--installation)
+    - [Opsætningen / installation](#opsætningen--installation)
+    - [C# projekt opsætning](#c-projekt-opsætning)
+
+## Ressourcer
+
+- [Use cases](https://memgraph.com/use-cases)
+- [Recommendation engine](https://memgraph.com/recommendation-engine)
+- [Faster recommendations with graph databases](https://memgraph.com/blog/faster-recommendations-with-graph-databases)
 
 ## Beskrivelse af databasen
 
@@ -31,7 +39,7 @@
 
 ## Dokumentation
 
-### Opæstningen / installation
+### Opsætningen / installation
 
 **Krav:** Docker og Docker Compose
 
@@ -40,7 +48,13 @@
 **Step 2:** Åben en terminal og kør:
 
 ```sh
-docker compose -f memgraph.yml -p graph up -d
+docker compose -f memgraph.yml up -d
 ```
 
 **Sidste step:** Tillykke! Nu burde Memgraph køre i Docker. Gå til [localhost:3000](http://localhost:3000) for at arbejde med Memgraph.
+
+### C# projekt opsætning
+
+**Krav:** .NET 7
+
+**Husk nu at Memgraph skal være kørende før det projekt vil virke.** Ellers så er det eneste du skal gøre er at åbne projektet i din favorit IDE og køre det, så burde du et `Hello World!` output i terminalen.

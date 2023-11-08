@@ -2,11 +2,11 @@
  
 namespace MemgraphApp
 {
-  public class Program : IDisposable
+  public class HelloWorld : IDisposable
   {
     private readonly IDriver _driver;
  
-    public Program(string uri, string user, string password)
+    public HelloWorld(string uri, string user, string password)
     {
       _driver = GraphDatabase.Driver(uri, AuthTokens.Basic(user, password));
     }
@@ -34,9 +34,9 @@ namespace MemgraphApp
  
     public static void Main()
     {
-      using (var greeter = new Program("bolt://localhost:7687", "", ""))
+      using (var greeter = new HelloWorld("bolt://localhost:7687", "", ""))
       {
-        greeter.PrintGreeting("Hello, World!");
+        greeter.PrintGreeting("Hello World!");
       }
     }
   }
