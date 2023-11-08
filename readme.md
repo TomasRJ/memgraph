@@ -2,15 +2,13 @@
 
 ## Indholdsfortegnelse
 
-- [Memgraph](#memgraph)
-  - [Indholdsfortegnelse](#indholdsfortegnelse)
-  - [Ressourcer](#ressourcer)
-  - [Beskrivelse af databasen](#beskrivelse-af-databasen)
-  - [Fordele og Ulemper](#fordele-og-ulemper)
-  - [Demo](#demo)
-  - [Dokumentation](#dokumentation)
-    - [Opsætningen / installation](#opsætningen--installation)
-    - [C# projekt opsætning](#c-projekt-opsætning)
+- [Ressourcer](#ressourcer)
+- [Beskrivelse af databasen](#beskrivelse-af-databasen)
+- [Fordele og Ulemper](#fordele-og-ulemper)
+- [Demo](#demo)
+- [Dokumentation](#dokumentation)
+  - [Opsætningen / installation](#opsætningen--installation)
+  - [C# projekt opsætning](#c-projekt-opsætning)
 
 ## Ressourcer
 
@@ -21,7 +19,14 @@
 ## Beskrivelse af databasen
 
 - Generel beskrivelse af databasetypen.
-- Typiske anvendelsescases og industrielle anvendelser.
+- Typiske anvendelsescases og ind- [Indholdsfortegnelse](#indholdsfortegnelse)
+- [Ressourcer](#ressourcer)
+- [Beskrivelse af databasen](#beskrivelse-af-databasen)
+- [Fordele og Ulemper](#fordele-og-ulemper)
+- [Demo](#demo)
+- [Dokumentation](#dokumentation)
+  - [Opsætningen / installation](#opsætningen--installation)
+  - [C# projekt opsætning](#c-projekt-opsætning)ustrielle anvendelser.
 - Overblik over datamodellen og forespørgselsmekanismer.
 
 ## Fordele og Ulemper
