@@ -19,20 +19,14 @@
 ## Beskrivelse af databasen
 
 - Generel beskrivelse af databasetypen.
-- Typiske anvendelsescases og ind- [Indholdsfortegnelse](#indholdsfortegnelse)
-- [Ressourcer](#ressourcer)
-- [Beskrivelse af databasen](#beskrivelse-af-databasen)
-- [Fordele og Ulemper](#fordele-og-ulemper)
-- [Demo](#demo)
-- [Dokumentation](#dokumentation)
-  - [Opsætningen / installation](#opsætningen--installation)
-  - [C# projekt opsætning](#c-projekt-opsætning)ustrielle anvendelser.
+- Typiske anvendelsescases og industrielle anvendelser.
 - Overblik over datamodellen og forespørgselsmekanismer.
+
 
 ## Fordele og Ulemper
 
 - Identificer fordele ved at bruge den valgte databasetype.
-  - Ulemper og eventuelle begrænsninger.
+- Ulemper og eventuelle begrænsninger.
 
 ## Demo
 
