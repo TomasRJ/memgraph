@@ -1,63 +1,46 @@
-# NoSQL database research opgave
+# Memgraph
 
-Gruppeopgave
+## Indholdsfortegnelse
 
-Formålet med denne opgave er at afdække en række databaser. I skal sørge for internt at koordinere forskellige databaser,
+- [Memgraph](#memgraph)
+  - [Indholdsfortegnelse](#indholdsfortegnelse)
+  - [Beskrivelse af databasen](#beskrivelse-af-databasen)
+  - [Fordele og Ulemper](#fordele-og-ulemper)
+  - [Demo](#demo)
+  - [Dokumentation](#dokumentation)
+    - [Opæstningen / installation](#opæstningen--installation)
 
-Præsentationen og dokumentation skal udarbejdes til fredag. Præsentationen forventes at tage 15. min.
+## Beskrivelse af databasen
 
-## Opgavebeskrivelse
+- Generel beskrivelse af databasetypen.
+- Typiske anvendelsescases og industrielle anvendelser.
+- Overblik over datamodellen og forespørgselsmekanismer.
 
-### Del 1: Valg af NoSQL Databasetype
+## Fordele og Ulemper
 
-Hver gruppe vælger én database type og finder en faktisk database engine inden for databasetypen. Nedenstående kan I se forskellige databasetyper. Opgaven inkluderer ikke relationelle databaser.
+- Identificer fordele ved at bruge den valgte databasetype.
+  - Ulemper og eventuelle begrænsninger.
 
-- Key-value stores
-- Document stores
-- Time Series DBMS
-- Graph DBMS
-- Search engines
-- Object oriented DBMS
-- RDF stores
-- Wide column stores
-- Vector DBMS
-- Multivalue DBMS
-- Native XML DBMS
-- Spatial DBMS
-- Event Stores
-- Content stores
-- Navigational DBMS
+## Demo
 
-I kan se mere på DB Engines: <https://db-engines.com/en/>
+**Gruppen skal skabe en simpel demo-applikation** eller datasæt for at vise databasens funktioner. Dette kan inkludere:
 
-Et eksempel kunne være `Document Store` og under det emne kunne det være `MongoDB`.
+- Import/eksport af data.
+- Eksempel på CRUD operationer (Create, Read, Update, Delete).
+- En demonstration af specifikke forespørgsler eller transaktioner, som viser databasens styrker.
 
-Gruppen skal foretage en analyse af deres valgte databasetype og udarbejde en præsentation der gennemgår:
+## Dokumentation
 
-- **Beskrivelse af databasen:**
-  - Generel beskrivelse af databasetypen.
-  - Typiske anvendelsescases og industrielle anvendelser.
-  - Overblik over datamodellen og forespørgselsmekanismer.
-- **Fordele og Ulemper:**
-  - identificer
-    - fordele ved at bruge den valgte databasetype.
-    - ulemper og eventuelle begrænsninger.
-- **Gruppen skal skabe en simpel demo-applikation** eller datasæt for at vise databasens funktioner. Dette kan inkludere:
-  - Import/eksport af data.
-  - Eksempel på CRUD operationer (Create, Read, Update, Delete).
-  - En demonstration af specifikke forespørgsler eller transaktioner, som viser databasens styrker.
+### Opæstningen / installation
 
-Gruppen skal lave følgende dokumentation:
+**Krav:** Docker og Docker Compose
 
-- Beskrivelse af opæstningen/installation af database
-  - Skal beskrives som en guide
-- Forbindelse til databasen fra en given applikationssoftware såsom C# applikation etc.
+**Step 1:** Download [memgraph.yml](https://raw.githubusercontent.com/TomasRJ/memgraph/main/memgraph.yml)
 
-Formålet med dokumentationen er at den skal sætte de andre grupper i stand til at opsætte og bruge databasen til begynder niveau. Det er derfor jeres ansvar at resterende hold kan bruge databasen og forbinde til den.
+**Step 2:** Åben en terminal og kør:
 
-Opgaven skal deles som et public Github repository og skal inkludere præsenteret demo miljø samt dokumentation.
+```sh
+docker compose -f memgraph.yml -p graph up -d
+```
 
-  
-Lad jer endelig inspirere af eksisterende templates for readmes
-
-<https://github.com/topics/readme-template>
+**Sidste step:** Tillykke! Nu burde Memgraph køre i Docker. Gå til [localhost:3000](http://localhost:3000) for at arbejde med Memgraph.
