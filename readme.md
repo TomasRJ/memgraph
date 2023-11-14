@@ -133,7 +133,7 @@ MATCH (u:User {id:1000}), (m:Movie {title:"Extreme Days (2001)"})
 MERGE (u)-[:RATED {rating:1.5}]->(m);
 ```
 
-Returner en list af alle de film som brugeren med `id = 1000` har bedømt:
+Returner en liste af alle de film som brugeren med `id = 1000` har bedømt:
 
 ```cypher
 MATCH (user:User {id:1000})-[rating:RATED]->(movie:Movie)
@@ -142,8 +142,8 @@ RETURN user, movie, rating
 
 #### Filmanbefalingssystemet
 
-Ideen er at implenter noget der hedder [memory based collaborative
-filtering](https://en.wikipedia.org/wiki/Collaborative_filtering).
+Ideen er at implementere noget der hedder [memory based collaborative
+filtrering](https://en.wikipedia.org/wiki/Collaborative_filtering).
 
 Lad os anbefale nogle film til brugeren med `id = 1000`:
 
@@ -198,12 +198,12 @@ LIMIT 10;
 WITH collect(other_id) AS similar_user_set
 ```
 
-Her beregner vi ligheder som den gennemsnitlige afstand mellem målbrugerbedømmelser
-og nogle andre brugerbedømmelser på det samme sæt film. Der er to parametre:
+Her beregner vi ligheder som den gennemsnitlige afstand mellem en målbrugerbedømmelse
+og nogle andre brugerbedømmelser på det samme sæt af film. Der er to parametre:
 "same_movies_rated" definerer antallet af samme film (mere end 3), som målbrugeren og andre brugere har bedømt sammen, og "similar_user_set" repræsenterer de brugere, der gav en lignende bedømmelse til de film, som målbrugeren har bedømt. Disse parametre gør det muligt at udtrække de bedste brugere til filmanbefalinger.
 
-Nu har vi et lignende brugersæt. Vi vil bruge disse brugere til at beregne gennemsnittet
-klassificeringsværdi for alle film, de har bedømt i databasen som en variabel "prediction_rating", og returner de bedst bedømte film i rækkefølge efter variabelen "prediction_rating".
+Nu har vi et lignende brugersæt. Vi vil bruge disse brugere til at beregne en gennemsnitlig
+klassificeringsværdi for alle de film de har bedømt i databasen som en variabel "prediction_rating". Vi returner de bedst bedømte film i rækkefølge efter variablen "prediction_rating".
 
 ```cypher
 MATCH (some_movie: Movie)-[fellow_rate:RATED]-(fellow_user:User)
