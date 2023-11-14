@@ -2,18 +2,16 @@
 
 ## Indholdsfortegnelse
 
-- [Memgraph](#memgraph)
-  - [Indholdsfortegnelse](#indholdsfortegnelse)
-  - [Beskrivelse af databasen](#beskrivelse-af-databasen)
-  - [Fordele og Ulemper](#fordele-og-ulemper)
-  - [Demo](#demo)
-  - [Dokumentation](#dokumentation)
-    - [Opsætningen / installation](#opsætningen--installation)
-    - [C# projekt opsætning](#c-projekt-opsætning)
-    - [Memgraph filmanbefaling opsætning](#memgraph-filmanbefaling-opsætning)
-      - [Filmanbefalingssystemet](#filmanbefalingssystemet)
-      - [Hvordan fungerer denne forespørgsel?](#hvordan-fungerer-denne-forespørgsel)
-  - [Litteraturliste](#litteraturliste)
+- [Beskrivelse af databasen](#beskrivelse-af-databasen)
+- [Fordele og Ulemper](#fordele-og-ulemper)
+- [Demo](#demo)
+- [Dokumentation](#dokumentation)
+  - [Opsætningen / installation](#opsætningen--installation)
+  - [C# projekt opsætning](#c-projekt-opsætning)
+  - [Memgraph filmanbefaling opsætning](#memgraph-filmanbefaling-opsætning)
+    - [Filmanbefalingssystemet](#filmanbefalingssystemet)
+    - [Hvordan fungerer denne forespørgsel?](#hvordan-fungerer-denne-forespørgsel)
+- [Litteraturliste](#litteraturliste)
 
 ## Beskrivelse af databasen
 
