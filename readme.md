@@ -146,21 +146,35 @@ filtrering](https://en.wikipedia.org/wiki/Collaborative_filtering).
 Lad os anbefale nogle film til brugeren med `id = 1000`:
 
 ```cypher
+// Hent alle film, som brugeren med id 1000 har bedømt
 MATCH (u:User {id:1000})-[r:RATED]-(m:Movie)
       -[other_r:RATED]-(other:User)
+
+// Beregn ligheden mellem brugeren og andre brugere
 WITH other.id AS other_id,
      avg(abs(r.rating-other_r.rating)) AS similarity,
      count(*) AS same_movies_rated
 WHERE same_movies_rated > 2
+
+// Sorter efter lighed og begræns til de 10 mest ens brugere
 WITH other_id
 ORDER BY similarity
 LIMIT 10
+
+// Saml de 10 mest ens brugeres id'er i en liste
 WITH collect(other_id) AS similar_user_set
+
+// Find alle de film, som de 10 mest ens brugere har bedømt
 MATCH (some_movie:Movie)-[fellow_rate:RATED]-(fellow_user:User)
 WHERE fellow_user.id IN similar_user_set
+
+// Beregn den gennemsnitlige bedømmelse for hver film
 WITH some_movie, avg(fellow_rate.rating) AS prediction_rating
+
+// Returner titlen på hver film og dens forventede bedømmelse
 RETURN some_movie.title AS Title, prediction_rating
 ORDER BY prediction_rating DESC;
+
 ```
 
 #### Hvordan fungerer denne forespørgsel?
